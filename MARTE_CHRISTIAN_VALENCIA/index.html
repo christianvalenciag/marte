@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#fafafa" />
+
+    <title>MARTE</title>
+
+    <meta name="description" content="" />
+    <script src="app/pouchdb-7.2.1.min.js"></script>
+    <link rel="apple-touch-icon" href="./assets/img/icon.png" />
+    <link rel="icon" href="./assets/img/favicon.png" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/main.css.map" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="app">
+        <div class="bloq_one">
+            <a href="dowland.html" class="menu_guardados"><span class="fa fa-bars"></span></a>
+            <div class="elementos_marte">
+                <div class="marte">MARTE</div>
+                <div class="temperatura" id="temp_media"></div>
+                <div class="max_min" id="temp_at"></div>
+            </div>
+            <div class="menus_laterales">
+                <a href="plus.html" class="plus"><span class="fa fa-info-circle"></span></a>
+                <div class="guardar"><span class="fa fa-plus-circle" id="guardar_plus"></span></div>
+            </div>
+        </div>
+        
+        <div class="bloq_two">
+            <div class="soles_anteriores">
+                <div class="soles" id="soles">
+                    <!-- <div class="sol_tittle">Sol</div>
+                    <div class="sol" id="sol_anterior_01"></div>
+                    <div class="sol">345</div>
+                    <div class="sol">345</div>
+                    <div class="sol">345</div>
+                    <div class="sol">345</div>
+                    <div class="sol">345</div>
+                    <div class="sol">345</div> -->
+                </div>
+                <div class="icons_estados">
+                    <div class="sol_icon"><span class="fa vacio"></span></div>
+                    <div class="sol_icon"><span class="fa fa-cloud-sun"></span></div>
+                    <div class="sol_icon"><span class="fa fa-cloud-sun"></span></div>
+                    <div class="sol_icon"><span class="fa fa-cloud-sun"></span></div>
+                    <div class="sol_icon"><span class="fa fa-cloud-sun"></span></div>
+                    <div class="sol_icon"><span class="fa fa-cloud-sun"></span></div>
+                    <div class="sol_icon"><span class="fa fa-cloud-sun"></span></div>
+                    <div class="sol_icon"><span class="fa fa-cloud-sun"></span></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog_three">
+            <div class="sol_actual_grupo">
+                <div class="ahora">AHORA</div>
+                <div class="dia_terrestre" id="today"></div>
+                <div class="sol_actual" id="sol_actual"> Sol </div>
+                <div class="estado" id="opacity_atm"></div>
+            </div>
+            <div class="otros">
+                <div class="temp">
+                    <div class="temp_sup">TEMPERATURA SUPERFICIAL</div>
+                    <div class="mx_mn" id="temp_sup"></div>
+                </div>
+                <div class="pre">
+                    <div class="presion">PRESIÓN</div>
+                    <div class="unid" id="unid_press"></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="./app/main.js"></script>
+</body>
+
+</html>

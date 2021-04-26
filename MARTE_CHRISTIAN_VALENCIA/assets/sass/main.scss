@@ -1,0 +1,778 @@
+@import "lib/vars";
+@import "lib/mixins";
+@import "lib/reboot";
+@import "lib/fontawesome/font-awesome";
+@import "lib/fontface";
+@import "lib/keyframes";
+
+// * {
+//   border: 1px solid pink;
+// }
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #fe7e68;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    position: relative;
+    .bloq_one {
+        position: relative;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        margin: 3rem 4rem 0rem 4rem;
+        .menu_guardados{
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: white;
+        }
+        .elementos_marte{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .marte{
+                font-size: 4rem;
+                font-weight: bold;
+            }
+            .temperatura{
+                font-size: 6rem;
+                margin: -.8rem;
+                padding: 0;
+            }
+            .max_min{
+                font-size: 1.5rem;
+                margin: -1rem;
+                font-weight: lighter;
+            }
+        }
+        .menus_laterales{
+            display: flex;
+            justify-content: space-between;
+            .plus{
+                font-size: 1.5rem;
+                margin: 0 .5rem;
+                color: white;
+            }
+            .guardar{
+                font-size: 1.5rem;
+                margin: 0 .5rem;
+                transition: ease-in .5s;
+                
+                &.guardado{
+                    color: #c20000;
+                    opacity: 30%;
+                }
+
+            }
+        }
+    }
+    
+    .bloq_two {
+        margin: -13rem 0rem 0rem -2rem;
+        height: 800px;
+
+        background-image: url("../img/fondo_uno_mac.png");
+        background-position: left;
+        background-size: contain;
+        background-size: 100% 100%;
+
+       .soles_anteriores{
+            display: flex;
+            color: white;
+            margin-left: 6rem;
+            padding-top: 12rem;
+            
+                
+            font-size: 1.85rem;
+            .soles{
+                margin-right: 3.5rem;
+                    
+                .sol_tittle{
+                    margin-bottom: 1rem;
+                }
+                .sol{
+                    margin-bottom: 1rem;
+                }
+            }
+            .icons_estados{
+                
+                .sol_icon{
+                    margin-bottom: 1rem;
+                    .fa{
+
+                    }
+                }
+            }
+        }
+    
+    }
+    .blog_three {
+        position: absolute;
+        width: 60rem;
+        height: 60rem;
+        left: 50%;
+        top: 22%;
+
+        background: #c20000;
+        box-shadow: 0px -6px 44px 15px rgba(177, 1, 1, 0.5);
+        border-radius: 100%;
+
+        color: white;
+        .sol_actual_grupo{
+            position: absolute;
+            left: 38%;
+            top: 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .ahora{
+                font-size: 2.7rem;
+            }
+            .dia_terrestre{
+                font-size: 1.25rem;
+                font-weight: lighter;
+            }
+            .sol_actual{
+                font-size: 1.25rem;
+            }
+            .estado{
+                font-size: 7rem;
+                .fa{
+
+                }
+
+            }
+        }
+        .otros{
+            position: absolute;
+            
+            left: 23%;
+            top: 45%;
+            display: flex;
+            
+            .temp{
+                margin: 0rem 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+               .temp_sup{
+                   font-size: 1.2rem;
+               }
+               .mx_mn{
+                font-weight: lighter;
+               }
+            }
+            .pre{
+                margin: 0rem 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .presion{
+                    font-size: 1.2rem;
+                }
+                .unid{
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
+    // tablet
+    @media screen and (max-width: 1124px) {
+        .blog_three {
+            left: 37%;
+            top: 22%;
+            .sol_actual_grupo{
+                left: 35%;
+                top: 10%;
+            }
+            .otros{ 
+                left: 16%;
+                top: 45%;
+            }
+        }
+    }
+    // iphone X / XS
+    @media screen and (max-width: 600px) {
+        .bloq_one {
+            margin: 3rem 2rem 0rem 2rem;
+            .menu_guardados{
+                font-size: 1.3rem;
+            }
+            .elementos_marte{
+                
+                margin-top: 1.3rem;
+                .marte{
+                    font-size: 3rem;
+                    font-weight: bold;
+                }
+                .temperatura{
+                    font-size: 5rem;
+                    margin: -.8rem;
+                    padding: 0;
+                }
+                .max_min{
+                    font-size: 1rem;
+                    margin: -.5rem;
+                }
+            }
+            .menus_laterales{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                .plus{
+                    font-size: 1.3rem;
+                    margin-bottom: 1rem;
+                }
+                .guardar{
+                    font-size: 1.3rem;
+                    
+                }
+            }
+        }
+        .bloq_two {
+            margin: -2rem -2rem 0rem -2rem;
+            height: 500px;
+    
+            background-image: url("../img/fondo_uno_mac.png");
+            background-position: left;
+            background-size: contain;
+            background-size: 100% 100%;
+    
+           .soles_anteriores{
+                display: flex;
+                color: white;
+                margin-left: 4rem;
+                padding-top: 6rem;
+                
+                    
+                font-size: 1.2rem;
+                .soles{
+                    margin-right: 2rem;
+                        
+                    .sol_tittle{
+                        margin-bottom: 0.25rem;
+                    }
+                    .sol{
+                        margin-bottom: 0.25rem;
+                    }
+                }
+                .icons_estados{
+                    
+                    .sol_icon{
+                        margin-bottom: 0.25rem;
+                        .fa{
+    
+                        }
+                    }
+                }
+            }
+        
+        }
+        .blog_three {
+            
+            width: 30rem;
+            height: 30rem;
+            left: -12%;
+            top: 80%;
+    
+            color: white;
+            .sol_actual_grupo{
+                position: absolute;
+                left: 36%;
+                top: 8%;
+                .ahora{
+                    font-size: 2rem;
+                }
+                .dia_terrestre{
+                    font-size: 1rem;
+                }
+                .sol_actual{
+                    font-size: 1rem;
+                }
+                .estado{
+                    font-size: 4rem;
+                    .fa{
+    
+                    }
+    
+                }
+            }
+            .otros{
+                position: absolute;
+                
+                left: 41%;
+                top: -50%;
+                display: flex;
+                flex-direction: column;
+                .temp{
+                    margin: 0rem 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                   .temp_sup{
+                       font-size: .9rem;
+                   }
+                   .mx_mn{
+                    font-size: .9rem;
+                   }
+                }
+                .pre{
+                    margin: .8rem 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .presion{
+                        font-size: .9rem;
+                    }
+                    .unid{
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // GUARDADOS
+
+    .bloq_head {
+        position: relative;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        margin: 3rem 4rem 0rem 4rem;
+        .menu_guardados{
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: white;
+        }
+        .marte{
+            font-size: 2rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+        
+    }
+    .fondo_two{
+        margin: -4rem 0rem 0rem -2rem;
+        
+        height: 800px;
+
+        background-image: url("../img/MARTE-03.png");
+        background-position: left;
+        background-size: contain;
+        background-size: 100% 100%;
+        .rojo{
+            padding: 0.1rem 0 0rem 0;
+            .fondo_one{
+                margin: 7rem 0rem 0rem 0rem;
+                height: 800px;
+        
+                background-image: url("../img/MARTE_02.png");
+                background-position: left;
+                background-size: contain;
+                background-size: 100% 100%;
+            
+            }
+        }
+    }
+    .guardados{
+        position: absolute;
+        top: 4rem;
+        color: white;
+        width: 100%;
+        .content_dowland{
+            background: rgba(255, 105, 105, 0.72);
+            box-shadow: 0px 4px 46px rgba(165, 71, 70, 0.25);
+            padding: 1rem 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            .day_min_max{
+                display: flex;
+                align-items: flex-end;
+                .day{
+                    margin-right: 1rem;
+                    font-size: 2.5rem;
+                    margin-bottom: -.3rem;
+                }
+                .min_max{
+                    font-size: 1.5rem;
+                    font-weight: lighter;
+                }
+            }
+            .temp_icon{
+                display: flex;
+                align-items: center;
+                .temp{
+                    margin-right: 1.5rem;
+                    font-size: 3.25rem;
+                }
+                .icon{
+                    font-size: 3rem;
+                }
+            }
+            .trash{
+                font-size: 1.8rem;
+            }
+        }
+    }
+    // tablet
+    @media screen and (max-width: 1124px) {
+       // adaptabilidad gracias al flex
+    }
+    // iphone X / XS
+    @media screen and (max-width: 600px) {
+        .bloq_head {
+            margin: 3rem 2rem 0rem 2rem;
+            .menu_guardados{
+                font-size: 1.3rem;
+            }
+            .marte{
+                font-size: 1.8rem;
+            }
+            
+        }
+        .fondo_two{
+            .rojo{
+                padding: 10rem 0 0rem 0;
+            }
+        }
+        .guardados{
+            position: absolute;
+            top: 4rem;
+            color: white;
+            width: 100%;
+            .content_dowland{
+                padding: 1rem 2rem;
+                .day_min_max{
+                    display: flex;
+                    align-items: flex-end;
+                    .day{
+                        margin-right: 0rem;
+                        font-size: 1.5rem;
+                        margin-bottom: -.3rem;
+                    }
+                    .min_max{
+                        font-size: .9rem;
+                        display: none;
+                    }
+                }
+                .temp_icon{
+                    display: flex;
+                    align-items: center;
+                    .temp{
+                        margin-right: .5rem;
+                        font-size: 2rem;
+                    }
+                    .icon{
+                        font-size: 2rem;
+                    }
+                }
+                .trash{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+
+    // INFORMACIÓN PLUS
+
+    .plus_01{
+        position: absolute;
+        top: 4rem;
+        color: white;
+        width: 100%;
+        top: 16rem;
+        left: 3rem;
+        .soles{
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            .tittle{
+                font-size: 1.85rem;
+            }
+            .soles_expl{
+                font-size: 1.2rem;
+                font-weight: lighter;
+                margin: 1.5rem 0rem;
+            }
+            .sol_actual_x{
+                display: flex;
+                font-size: 1.85rem;
+                justify-content: space-between;
+                margin-right: 3rem;
+                .puntos{
+                    opacity: 40%;
+                }
+                .sol_02{
+                    opacity: 40%;
+                }
+                .sol_01{
+                    opacity: 60%;
+                }
+                .sol_actual{
+                    margin: 0;
+                }
+            }
+        }
+        
+    }
+    .plus_02{
+        position: absolute;
+        top: 4rem;
+        color: white;
+        width: 100%;
+        left: 55rem;
+        top: 7.5rem;
+        .long_solar{
+            display: flex;
+            .ilustracion{
+                position: relative;
+                border: solid 1px white;
+                width: 15rem;
+                height: 15rem;
+                border-radius: 100%;
+                .sol_centro{
+                    position: absolute;
+                    width: 3rem;
+                    height: 3rem;
+                    background-color: white;
+                    border-radius: 100%;
+
+                    left: 5.9rem;
+                    top: 6rem;
+                }
+                .marte{
+                    position: absolute;
+                    width: 1rem;
+                    height: 1rem;
+                    background-color: white;
+                    border-radius: 100%;
+
+                    left: 13rem;
+                    top: 11.2rem;
+
+                }
+            }
+            .info_long_sol{
+                margin: 5rem 0rem 0rem 4rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .grados{
+                    font-size: 2rem;
+                }
+                .name{
+                    font-weight: lighter;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .plus_03{
+        position: absolute;
+        color: white;
+        width: 100%;
+
+        bottom: 10rem;
+        left: 32rem;
+        .imagen_actual{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .name{
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                font-weight: lighter;
+            }
+            .fa{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .plus_04{
+        display: none;
+        position: absolute;
+        top: 2rem;
+        left: 20%;
+        width: auto;
+        padding: 1rem 2rem 2rem 2rem;
+        border-radius: 1.5rem;
+        background-color: #f86767;
+
+        &.visibility{
+            display: inherit;
+        }
+        .flex{
+            display: flex;
+        flex-direction: column;
+        align-items: center;
+            .close{
+                margin-bottom: 1rem;
+                .fa{
+                    color: white;
+                    font-size: 1.5rem;
+                }
+            }
+            .image{
+                width: 50rem;
+                height: 30rem;
+                
+                img{
+                    border-radius: 1.5rem;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+        
+    }
+    // tablet
+    @media screen and (max-width: 1124px) {
+        .plus_02{
+            left: 40rem;
+        }
+        .plus_03{
+            left: 27rem;
+        }
+        .plus_04{
+            // display: none;
+            position: absolute;
+            top: 4rem;
+            left: 10%;
+            
+        }
+     }
+     @media screen and (max-width: 924px) {
+        .plus_01{
+            .soles{
+                .sol_actual_x{
+                    font-size: 1.55rem;
+                }
+            }
+        }
+        .plus_02{
+            left: 30rem;
+            top: 7.5rem;
+            .long_solar{
+                .info_long_sol{
+                    margin: 5rem 0rem 0rem 2rem;
+                }
+            }        
+        }
+        .plus_03{
+            bottom: 10rem;
+            left: 21.5rem;
+        }
+        .plus_04{
+            // display: none;
+            position: absolute;
+            top: 6rem;
+            left: 7%;
+            .flex{
+                .close{
+                }
+                .image{
+                    width: 45rem;
+                    height: 25rem;
+                }
+            }
+            
+        }
+     } 
+     // iphone X / XS
+     @media screen and (max-width: 600px) {
+        .plus_01{
+            top: 5rem;
+            left: 2rem;
+            .soles{
+                width: 84%;
+                align-items: center;
+                .tittle{
+                    font-size: 1.5rem;
+                }
+                .soles_expl{
+                    font-size: 1rem;
+                    font-weight: lighter;
+                    margin: .5rem 0rem;
+                }
+                .sol_actual_x{
+                    display: flex;
+                    font-size: 1.5rem;
+                    justify-content: space-between;
+                    margin-right: .5rem;
+                    width: 90%;
+                    font-size: 1.2rem;
+                }
+            }
+            
+        }
+        .plus_02{
+            left: -2rem;
+            top: 20.5rem;
+            .long_solar{
+                .info_long_sol{
+                    margin: 5rem 0rem 0rem 2rem;
+                    .grados{
+                        font-size: 1.85rem;
+                    }
+                    .name{
+                        font-weight: lighter;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .plus_03{
+            bottom: 4.5rem;
+            left: .5rem;
+            .imagen_actual{
+                .name{
+                    font-size: 1.25rem;
+                    margin-bottom: .5rem;
+                    font-weight: lighter;
+                }
+                .fa{
+                    font-size: 1.85rem;
+                }
+            }
+        }
+        .plus_04{
+            // display: none;
+            position: absolute;
+            top: 10rem;
+            left: 7%;
+            padding: .5rem 1rem 1rem 1rem;
+            .flex{
+                .close{
+                    margin-bottom: .4rem;
+                }
+                .image{
+                    width: 18rem;
+                    height: 30rem;
+                }
+            }
+            
+        }
+     }
+     
+    
+}
+
